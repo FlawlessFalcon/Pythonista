@@ -30,9 +30,32 @@ for item in [1,3,5,7,9]:
 for item in range(5):
     print item**2
 
+
+# Test your understanding of what we have covered so far by trying the following exercise.
+# Modify the code from Activecode 8 so that the final list only contains a single copy of each letter.
 wordlist = ['cat','dog','rabbit']
 letterlist = [ ]
 for aword in wordlist:
     for aletter in aword:
-        letterlist.append(aletter)
+        if aletter in letterlist:
+            continue
+        else:
+            letterlist.append(aletter)
 print(letterlist)
+
+
+sqlist=[]
+for x in range(1,11):
+    sqlist.append(x*x)
+print sqlist
+
+sqlist1=[x*x for x in range(1,11)]
+print sqlist1
+
+sqlist2=[x*x for x in range(1,11) if x%2 != 0]
+print sqlist2
+
+print [ch.upper() for ch in 'comprehension' if ch not in 'aeiou']
+
+print [al for al in "".join (['cat', 'dog', 'rabbit'])]
+
